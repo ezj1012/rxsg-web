@@ -1,0 +1,99 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,description_json,bingzhou_png,jiaozhou_png,jingzhou_png,jizhou_png,liangzhou_png,qingzhou_png,sanguo_map_png,silv_png,xuzhou_png,yangzhou_png,yizhou_png,youzhou_png,yunzhou_png,yuzhou_png",
+			"name": "preload"
+		},
+		{
+			"keys": "yuzhou_png,yunzhou_png,youzhou_png,yizhou_png,yangzhou_png,xuzhou_png,silv_png,sanguo_map_png,qingzhou_png,liangzhou_png,jizhou_png,jingzhou_png,jiaozhou_png,bingzhou_png",
+			"name": "simpleWorld"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "art/simpleWorld/bingzhou.png",
+			"type": "image",
+			"name": "bingzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/jiaozhou.png",
+			"type": "image",
+			"name": "jiaozhou_png"
+		},
+		{
+			"url": "art/simpleWorld/jingzhou.png",
+			"type": "image",
+			"name": "jingzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/jizhou.png",
+			"type": "image",
+			"name": "jizhou_png"
+		},
+		{
+			"url": "art/simpleWorld/liangzhou.png",
+			"type": "image",
+			"name": "liangzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/qingzhou.png",
+			"type": "image",
+			"name": "qingzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/sanguo_map.png",
+			"type": "image",
+			"name": "sanguo_map_png"
+		},
+		{
+			"url": "art/simpleWorld/silv.png",
+			"type": "image",
+			"name": "silv_png"
+		},
+		{
+			"url": "art/simpleWorld/xuzhou.png",
+			"type": "image",
+			"name": "xuzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/yangzhou.png",
+			"type": "image",
+			"name": "yangzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/yizhou.png",
+			"type": "image",
+			"name": "yizhou_png"
+		},
+		{
+			"url": "art/simpleWorld/youzhou.png",
+			"type": "image",
+			"name": "youzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/yunzhou.png",
+			"type": "image",
+			"name": "yunzhou_png"
+		},
+		{
+			"url": "art/simpleWorld/yuzhou.png",
+			"type": "image",
+			"name": "yuzhou_png"
+		}
+	]
+}
