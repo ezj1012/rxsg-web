@@ -9,7 +9,14 @@
 	],
 	"game": [
 		"bin-debug/Main.js",
+		"bin-debug/MEL.js",
 		"bin-debug/MouseEventHolder.js",
-		"bin-debug/MyGrid.js"
+		"bin-debug/MyGrid.js",
+		"bin-debug/playerRegister/PlayerRegister.js",
+		"bin-debug/playerRegister/RegisterWorldMap.js",
+		"bin-debug/simpleEvent/CanvasEventAdapter.js",
+		"bin-debug/simpleEvent/KeyDownEvent.js",
+		"bin-debug/simpleEvent/MouseMoveEvent.js",
+		"bin-debug/simpleEvent/MousePoint.js"
 	]
 }

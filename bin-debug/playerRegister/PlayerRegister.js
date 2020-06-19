@@ -43,50 +43,46 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var Main = (function (_super) {
-    __extends(Main, _super);
-    function Main() {
+var PlayerRegister = (function (_super) {
+    __extends(PlayerRegister, _super);
+    function PlayerRegister() {
         var _this = _super.call(this) || this;
+        _this.onMove = function (evt) {
+            _this.worldMap.onMove(evt);
+        };
         _this.onClick = function (evt) {
-            _this.playerRegister.onClick(evt);
+            _this.worldMap.onClick(evt);
         };
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
     }
-    Main.prototype.onAddToStage = function (event) {
+    PlayerRegister.prototype.onAddToStage = function (event) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        // this.meh = new MouseEventHolder();
-                        this.cea = new CanvasEventAdapter(this);
-                        this.playerRegister = new PlayerRegister();
-                        this.addChild(this.playerRegister);
-                        this.addEventListener(KeyDownEvent.KEY_DOWN, this.onKeyDown, this);
-                        this.addEventListener(MouseMoveEvent.MOVE, this.playerRegister.onMove, this);
-                        this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
-                        // RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
+                        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
                         return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
-                        // RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
+                        _a.sent();
+                        return [4 /*yield*/, RES.loadGroup("simpleWorld")];
+                    case 2:
                         _a.sent();
                         return [2 /*return*/];
                 }
             });
         });
     };
-    Main.prototype.onKeyDown = function (e) {
-        this.playerRegister.onKeyDown(e);
+    PlayerRegister.prototype.onGroupComplete = function () {
+        this.worldMap = new RegisterWorldMap();
+        this.worldMap.x = 335;
+        this.worldMap.y = 64;
+        this.addChild(this.worldMap);
     };
-    Main.prototype.onGroupComplete = function () {
-        // this.playerRegister = new PlayerRegister();
-        // this.addChild(img);
-        // this.addChild(this.playerRegister);
-        // let bckImg: egret.Bitmap = new egret.Bitmap();
-        // bckImg.texture = RES.getRes("sanguo_map_png");
-        // this.addChild(bckImg);
+    PlayerRegister.prototype.onKeyDown = function (e) {
+        this.worldMap.onKeyDown(e);
     };
-    return Main;
-}(egret.DisplayObjectContainer));
-__reflect(Main.prototype, "Main");
-//# sourceMappingURL=Main.js.map
+    return PlayerRegister;
+}(egret.Sprite));
+__reflect(PlayerRegister.prototype, "PlayerRegister");
+//# sourceMappingURL=PlayerRegister.js.map
