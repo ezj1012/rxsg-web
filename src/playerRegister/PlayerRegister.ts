@@ -1,8 +1,14 @@
 class PlayerRegister extends egret.Sprite {
 
 	worldMap: RegisterWorldMap;
+	register: RegisterInfo;
+
 	public constructor() {
 		super();
+		this.x = 0;
+		this.y = 0;
+		this.width = 1000;
+		this.height = 600;
 		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
 	}
 
@@ -10,26 +16,45 @@ class PlayerRegister extends egret.Sprite {
 		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
 		await RES.loadConfig("resource/default.res.json", "resource/");
 		await RES.loadGroup("simpleWorld");
+		await RES.loadGroup("board");
+		await RES.loadGroup("player");
 	}
 
 	private onGroupComplete() {
 		this.worldMap = new RegisterWorldMap();
 		this.worldMap.x = 335;
 		this.worldMap.y = 64;
+		this.worldMap.width = 620;
+		this.worldMap.height = 500;
 
+		this.register = new RegisterInfo();
+
+
+		this.addChild(this.register);
 		this.addChild(this.worldMap);
+
 	}
 
 
-	public onMove = (evt: MouseMoveEvent) => {
-		this.worldMap.onMove(evt);
+	public handMouseEvent = (evt: SimpleMouseEvent) => {
+		console.log(evt.type);
+		if (this.worldMap != null) {
+			this.worldMap.handMouseEvent(evt);
+		}
+		if (this.register != null) {
+			this.register.handMouseEvent(evt);
+		}
 	}
 
-	public onKeyDown(e: KeyDownEvent) {
-		this.worldMap.onKeyDown(e);
+
+	public onKeyDown = (evt: KeyDownEvent) => {
+		if (this.worldMap != null) {
+			this.worldMap.onKeyDown(evt);
+		}
+		if (this.register != null) {
+			this.register.onKeyDown(evt);
+		}
 	}
 
-	public onClick = (evt: egret.TouchEvent) => {
-		this.worldMap.onClick(evt);
-	}
+
 }

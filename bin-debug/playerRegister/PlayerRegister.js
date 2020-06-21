@@ -47,12 +47,27 @@ var PlayerRegister = (function (_super) {
     __extends(PlayerRegister, _super);
     function PlayerRegister() {
         var _this = _super.call(this) || this;
-        _this.onMove = function (evt) {
-            _this.worldMap.onMove(evt);
+        _this.handMouseEvent = function (evt) {
+            console.log(evt.type);
+            if (_this.worldMap != null) {
+                _this.worldMap.handMouseEvent(evt);
+            }
+            if (_this.register != null) {
+                _this.register.handMouseEvent(evt);
+            }
         };
-        _this.onClick = function (evt) {
-            _this.worldMap.onClick(evt);
+        _this.onKeyDown = function (evt) {
+            if (_this.worldMap != null) {
+                _this.worldMap.onKeyDown(evt);
+            }
+            if (_this.register != null) {
+                _this.register.onKeyDown(evt);
+            }
         };
+        _this.x = 0;
+        _this.y = 0;
+        _this.width = 1000;
+        _this.height = 600;
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
     }
@@ -68,6 +83,12 @@ var PlayerRegister = (function (_super) {
                         return [4 /*yield*/, RES.loadGroup("simpleWorld")];
                     case 2:
                         _a.sent();
+                        return [4 /*yield*/, RES.loadGroup("board")];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, RES.loadGroup("player")];
+                    case 4:
+                        _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -77,10 +98,11 @@ var PlayerRegister = (function (_super) {
         this.worldMap = new RegisterWorldMap();
         this.worldMap.x = 335;
         this.worldMap.y = 64;
+        this.worldMap.width = 620;
+        this.worldMap.height = 500;
+        this.register = new RegisterInfo();
+        this.addChild(this.register);
         this.addChild(this.worldMap);
-    };
-    PlayerRegister.prototype.onKeyDown = function (e) {
-        this.worldMap.onKeyDown(e);
     };
     return PlayerRegister;
 }(egret.Sprite));

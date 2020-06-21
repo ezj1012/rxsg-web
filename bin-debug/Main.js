@@ -47,9 +47,6 @@ var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         var _this = _super.call(this) || this;
-        _this.onClick = function (evt) {
-            _this.playerRegister.onClick(evt);
-        };
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
     }
@@ -63,11 +60,15 @@ var Main = (function (_super) {
                         this.playerRegister = new PlayerRegister();
                         this.addChild(this.playerRegister);
                         this.addEventListener(KeyDownEvent.KEY_DOWN, this.onKeyDown, this);
-                        this.addEventListener(MouseMoveEvent.MOVE, this.playerRegister.onMove, this);
-                        this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
+                        this.addEventListener(SimpleMouseEvent.MOVE, this.playerRegister.handMouseEvent, this);
+                        this.addEventListener(SimpleMouseEvent.DOWN, this.playerRegister.handMouseEvent, this);
+                        this.addEventListener(SimpleMouseEvent.UP, this.playerRegister.handMouseEvent, this);
+                        this.addEventListener(SimpleMouseEvent.CLICK, this.playerRegister.handMouseEvent, this);
+                        // this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
                         // RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
                         return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
+                        // this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
                         // RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
                         _a.sent();
                         return [2 /*return*/];

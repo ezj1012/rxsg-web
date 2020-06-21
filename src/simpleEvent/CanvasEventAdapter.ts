@@ -6,7 +6,11 @@ class CanvasEventAdapter {
 		this.container = container;
 		this.canvas = document.getElementsByTagName("CANVAS")[0];
 		this.canvas.addEventListener('mousemove', this.onMove);
+		this.canvas.addEventListener('mousedown', this.onDown);
+		this.canvas.addEventListener('mouseup', this.onUp);
+		this.canvas.addEventListener('click', this.onClick);
 		document.addEventListener('keydown', this.onKeyDown);
+
 	}
 
 	private onKeyDown = (e: KeyboardEvent) => {
@@ -17,16 +21,33 @@ class CanvasEventAdapter {
 	}
 
 	private onMove = (evt: MouseEvent) => {
-		let temp: MouseMoveEvent = this.getPoint(evt.currentTarget, evt.x, evt.y);
+		let temp: SimpleMouseEvent = this.getPoint(evt.currentTarget, evt.x, evt.y, SimpleMouseEvent.MOVE);
 		this.container.dispatchEvent(temp);
 	}
 
-	private getPoint(canvas, x: number, y: number) {
+
+	private onDown = (evt: MouseEvent) => {
+		let temp: SimpleMouseEvent = this.getPoint(evt.currentTarget, evt.x, evt.y, SimpleMouseEvent.DOWN);
+		this.container.dispatchEvent(temp);
+	}
+
+
+	private onUp = (evt: MouseEvent) => {
+		let temp: SimpleMouseEvent = this.getPoint(evt.currentTarget, evt.x, evt.y, SimpleMouseEvent.UP);
+		this.container.dispatchEvent(temp);
+	}
+
+	private onClick = (evt: MouseEvent) => {
+		let temp: SimpleMouseEvent = this.getPoint(evt.currentTarget, evt.x, evt.y, SimpleMouseEvent.CLICK);
+		this.container.dispatchEvent(temp);
+	}
+
+	private getPoint(canvas, x: number, y: number, evtType: string) {
 		var style = window.getComputedStyle(canvas, null);
 		var rect = canvas.getBoundingClientRect();
 		let xx: number = (x - rect.left) * (canvas.width / parseFloat(style['width']));
 		let yy: number = (y - rect.top) * (canvas.height / parseFloat(style['height']));
-		let t: MouseMoveEvent = new MouseMoveEvent(MouseMoveEvent.MOVE);
+		let t: SimpleMouseEvent = new SimpleMouseEvent(evtType);
 		t.setValue(xx, yy);
 		return t;
 	}

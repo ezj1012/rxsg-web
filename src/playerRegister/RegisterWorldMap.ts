@@ -41,27 +41,29 @@ class RegisterWorldMap extends egret.Sprite {
 		// });
 	}
 
-	public onMove = (evt: MouseMoveEvent) => {
-		let x = evt.getX();
-		let y = evt.getY();
-		if (x < 335 || x > 950 || y < 64 || y > 560) {
-			if (this.disIdx != -1) {
-				this.itemImg[this.disIdx].alpha = 0;
+	public handMouseEvent = (evt: SimpleMouseEvent) => {
+		if (evt.type == SimpleMouseEvent.MOVE) {
+			let x = evt.getX();
+			let y = evt.getY();
+			if (x < 335 || x > 950 || y < 64 || y > 560) {
+				if (this.disIdx != -1) {
+					this.itemImg[this.disIdx].alpha = 0;
+				}
+				return;
 			}
-			return;
-		}
 
-		let pIdx: number = -1;
-		for (let i = 0; i < this.itemName.length; i++) {
-			var img2: egret.Bitmap = this.itemImg[i];
-			if (img2.hitTestPoint(x, y, true)) {
-				pIdx = i;
-				break;
+			let pIdx: number = -1;
+			for (let i = 0; i < this.itemName.length; i++) {
+				var img2: egret.Bitmap = this.itemImg[i];
+				if (img2.hitTestPoint(x, y, true)) {
+					pIdx = i;
+					break;
+				}
 			}
-		}
-		this.disIdx = pIdx;
-		for (let i = 0; i < this.itemName.length; i++) {
-			this.itemImg[i].alpha = i == pIdx ? 1 : 0;
+			this.disIdx = pIdx;
+			for (let i = 0; i < this.itemName.length; i++) {
+				this.itemImg[i].alpha = i == pIdx ? 1 : 0;
+			}
 		}
 	}
 

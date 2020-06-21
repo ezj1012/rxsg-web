@@ -8,25 +8,28 @@ var __extends = this && this.__extends || function __extends(t, e) {
 for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
 r.prototype = e.prototype, t.prototype = new r();
 };
-var MouseMoveEvent = (function (_super) {
-    __extends(MouseMoveEvent, _super);
-    function MouseMoveEvent(type, bubbles, cancelable) {
+var SimpleMouseEvent = (function (_super) {
+    __extends(SimpleMouseEvent, _super);
+    function SimpleMouseEvent(type, bubbles, cancelable) {
         if (bubbles === void 0) { bubbles = false; }
         if (cancelable === void 0) { cancelable = false; }
         return _super.call(this, type, bubbles, cancelable) || this;
     }
-    MouseMoveEvent.prototype.setValue = function (x, y) {
+    SimpleMouseEvent.prototype.setValue = function (x, y) {
         this.x = x;
         this.y = y;
     };
-    MouseMoveEvent.prototype.getX = function () {
+    SimpleMouseEvent.prototype.getX = function () {
         return this.x;
     };
-    MouseMoveEvent.prototype.getY = function () {
+    SimpleMouseEvent.prototype.getY = function () {
         return this.y;
     };
-    MouseMoveEvent.MOVE = "MOVE";
-    return MouseMoveEvent;
+    SimpleMouseEvent.MOVE = "MOVE";
+    SimpleMouseEvent.DOWN = "DOWN";
+    SimpleMouseEvent.UP = "UP";
+    SimpleMouseEvent.CLICK = "CLICK";
+    return SimpleMouseEvent;
 }(egret.Event));
-__reflect(MouseMoveEvent.prototype, "MouseMoveEvent");
-//# sourceMappingURL=MouseMoveEvent.js.map
+__reflect(SimpleMouseEvent.prototype, "SimpleMouseEvent");
+//# sourceMappingURL=SimpleMouseEvent.js.map

@@ -20,26 +20,28 @@ var RegisterWorldMap = (function (_super) {
         _this.itemIdx = [[327, 185], [369, 149], [354, 0], [33, 214], [368, 233], [416, 178], [203, 153], [423, 116], [-5, 2], [356, 84], [248, 229], [128, 356], [213, 40]];
         _this.lc = [];
         _this.itemImg = [];
-        _this.onMove = function (evt) {
-            var x = evt.getX();
-            var y = evt.getY();
-            if (x < 335 || x > 950 || y < 64 || y > 560) {
-                if (_this.disIdx != -1) {
-                    _this.itemImg[_this.disIdx].alpha = 0;
+        _this.handMouseEvent = function (evt) {
+            if (evt.type == SimpleMouseEvent.MOVE) {
+                var x = evt.getX();
+                var y = evt.getY();
+                if (x < 335 || x > 950 || y < 64 || y > 560) {
+                    if (_this.disIdx != -1) {
+                        _this.itemImg[_this.disIdx].alpha = 0;
+                    }
+                    return;
                 }
-                return;
-            }
-            var pIdx = -1;
-            for (var i = 0; i < _this.itemName.length; i++) {
-                var img2 = _this.itemImg[i];
-                if (img2.hitTestPoint(x, y, true)) {
-                    pIdx = i;
-                    break;
+                var pIdx = -1;
+                for (var i = 0; i < _this.itemName.length; i++) {
+                    var img2 = _this.itemImg[i];
+                    if (img2.hitTestPoint(x, y, true)) {
+                        pIdx = i;
+                        break;
+                    }
                 }
-            }
-            _this.disIdx = pIdx;
-            for (var i = 0; i < _this.itemName.length; i++) {
-                _this.itemImg[i].alpha = i == pIdx ? 1 : 0;
+                _this.disIdx = pIdx;
+                for (var i = 0; i < _this.itemName.length; i++) {
+                    _this.itemImg[i].alpha = i == pIdx ? 1 : 0;
+                }
             }
         };
         _this.onClick = function (evt) {

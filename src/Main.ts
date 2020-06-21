@@ -17,8 +17,11 @@ class Main extends egret.DisplayObjectContainer {
         this.addChild(this.playerRegister);
 
         this.addEventListener(KeyDownEvent.KEY_DOWN, this.onKeyDown, this);
-        this.addEventListener(MouseMoveEvent.MOVE, this.playerRegister.onMove, this);
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
+        this.addEventListener(SimpleMouseEvent.MOVE, this.playerRegister.handMouseEvent, this);
+        this.addEventListener(SimpleMouseEvent.DOWN, this.playerRegister.handMouseEvent, this);
+        this.addEventListener(SimpleMouseEvent.UP, this.playerRegister.handMouseEvent, this);
+        this.addEventListener(SimpleMouseEvent.CLICK, this.playerRegister.handMouseEvent, this);
+        // this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
         // RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
         await RES.loadConfig("resource/default.res.json", "resource/");
         // await RES.loadGroup("simpleWorld");
@@ -27,9 +30,7 @@ class Main extends egret.DisplayObjectContainer {
     private onKeyDown(e: KeyDownEvent) {
         this.playerRegister.onKeyDown(e);
     }
-    private onClick = (evt: egret.TouchEvent) => {
-        this.playerRegister.onClick(evt);
-    }
+
     private onGroupComplete() {
         // this.playerRegister = new PlayerRegister();
         // this.addChild(img);

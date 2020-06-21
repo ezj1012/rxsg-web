@@ -1,5 +1,9 @@
-class MouseMoveEvent extends egret.Event {
+class SimpleMouseEvent extends egret.Event {
 	public static MOVE: string = "MOVE";
+	public static DOWN: string = "DOWN";
+	public static UP: string = "UP";
+	public static CLICK: string = "CLICK";
+
 	private x: number;
 	private y: number;
 	public constructor(type: string, bubbles: boolean = false, cancelable: boolean = false) {
