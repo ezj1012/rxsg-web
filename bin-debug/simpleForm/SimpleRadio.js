@@ -33,7 +33,7 @@ var SimpleRadio = (function () {
         }
         this.selectedFlag = s;
         if (this.selectedFlag) {
-            this.img.texture = this.hoveFlag ? this.icon_on : this.icon_down;
+            this.img.texture = this.icon_on;
         }
         else {
             this.img.texture = this.hoveFlag ? this.icon_on : this.icon;

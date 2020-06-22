@@ -1,11 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bingzhou_png,jiaozhou_png,jingzhou_png,jizhou_png,liangzhou_png,qingzhou_png,sanguo_map_png,silv_png,xuzhou_png,yangzhou_png,yizhou_png,youzhou_png,yunzhou_png,yuzhou_png,board_popup_png,board_tip_png,board_hint_png,board_input_png,btn_prev_png,btn_prev_down_png,btn_prev_on_png,btn_next_png,btn_next_down_png,btn_next_on_png,radio_unselected_over_png,radio_selected_png,radio_unselected_png,player_male_3_jpg,player_male_4_jpg,player_male_5_jpg,player_male_6_jpg,player_male_7_jpg,player_male_8_jpg,player_male_9_jpg,player_male_10_jpg,player_child_1_png,player_child_2_png,player_child_3_png,player_child_4_png,player_child_5_png,player_child_6_png,player_child_7_png,player_child_8_png,player_child_9_png,player_child_10_png,player_female_1_jpg,player_female_2_jpg,player_female_3_jpg,player_female_4_jpg,player_female_5_jpg,player_female_6_jpg,player_female_7_jpg,player_female_8_jpg,player_female_9_jpg,player_female_10_jpg,player_male_1_jpg,player_male_2_jpg,combobox_down_png,combobox_up_png,numericstepper_down_down_png,numericstepper_down_up_png,numericstepper_up_down_png,numericstepper_up_up_png,box_border_png",
+			"keys": "bg_jpg,egret_icon_png,description_json,bingzhou_png,jiaozhou_png,jingzhou_png,jizhou_png,liangzhou_png,qingzhou_png,sanguo_map_png,silv_png,xuzhou_png,yangzhou_png,yizhou_png,youzhou_png,yunzhou_png,yuzhou_png,board_popup_png,board_tip_png,board_hint_png,board_input_png,player_male_3_jpg,player_male_4_jpg,player_male_5_jpg,player_male_6_jpg,player_male_7_jpg,player_male_8_jpg,player_male_9_jpg,player_male_10_jpg,player_child_1_png,player_child_2_png,player_child_3_png,player_child_4_png,player_child_5_png,player_child_6_png,player_child_7_png,player_child_8_png,player_child_9_png,player_child_10_png,player_female_1_jpg,player_female_2_jpg,player_female_3_jpg,player_female_4_jpg,player_female_5_jpg,player_female_6_jpg,player_female_7_jpg,player_female_8_jpg,player_female_9_jpg,player_female_10_jpg,player_male_1_jpg,player_male_2_jpg,board_hint2_png,board_input2_png,board_popup2_png,board_tip2_png,player_child_12_png,player_child_102_png,player_child_22_png,player_child_32_png,player_child_42_png,player_child_52_png,player_child_62_png,player_child_72_png,player_child_82_png,player_child_92_png,player_female_12_jpg,player_female_102_jpg,player_female_22_jpg,player_female_32_jpg,player_female_42_jpg,player_female_52_jpg,player_female_62_jpg,player_female_72_jpg,player_female_82_jpg,player_female_92_jpg,player_male_12_jpg,player_male_102_jpg,player_male_22_jpg,player_male_32_jpg,player_male_42_jpg,player_male_52_jpg,player_male_62_jpg,player_male_72_jpg,player_male_82_jpg,player_male_92_jpg,box_border_png,btn_next_png,btn_next_down_png,btn_next_on_png,btn_prev_png,btn_prev_down_png,btn_prev_on_png,combobox_down_png,combobox_list_png,combobox_list_ctrl_png,combobox_list_down_png,combobox_list_up_png,combobox_up_png,numericstepper_down_down_png,numericstepper_down_up_png,numericstepper_up_down_png,numericstepper_up_up_png,radio_selected_png,radio_unselected_png,radio_unselected_over_png,未标题-2_png",
 			"name": "preload"
 		},
 		{
-			"keys": "yuzhou_png,yunzhou_png,youzhou_png,yizhou_png,yangzhou_png,xuzhou_png,silv_png,sanguo_map_png,qingzhou_png,liangzhou_png,jizhou_png,jingzhou_png,jiaozhou_png,bingzhou_png,btn_prev_png,btn_prev_on_png,btn_prev_down_png,btn_next_png,btn_next_on_png,btn_next_down_png,radio_unselected_png,radio_selected_png,radio_unselected_over_png,combobox_down_png,combobox_up_png,box_border_png",
+			"keys": "yuzhou_png,yunzhou_png,youzhou_png,yizhou_png,yangzhou_png,xuzhou_png,silv_png,sanguo_map_png,qingzhou_png,liangzhou_png,jizhou_png,jingzhou_png,jiaozhou_png,bingzhou_png",
 			"name": "simpleWorld"
 		},
 		{
@@ -126,51 +126,6 @@
 			"type": "image",
 			"name": "board_input_png",
 			"scale9grid": "4,4,52,18"
-		},
-		{
-			"url": "art/simpleWorld/button/btn_prev.png",
-			"type": "image",
-			"name": "btn_prev_png"
-		},
-		{
-			"url": "art/simpleWorld/button/btn_prev_down.png",
-			"type": "image",
-			"name": "btn_prev_down_png"
-		},
-		{
-			"url": "art/simpleWorld/button/btn_prev_on.png",
-			"type": "image",
-			"name": "btn_prev_on_png"
-		},
-		{
-			"url": "art/simpleWorld/button/btn_next.png",
-			"type": "image",
-			"name": "btn_next_png"
-		},
-		{
-			"url": "art/simpleWorld/button/btn_next_down.png",
-			"type": "image",
-			"name": "btn_next_down_png"
-		},
-		{
-			"url": "art/simpleWorld/button/btn_next_on.png",
-			"type": "image",
-			"name": "btn_next_on_png"
-		},
-		{
-			"url": "art/simpleWorld/button/radio_unselected_over.png",
-			"type": "image",
-			"name": "radio_unselected_over_png"
-		},
-		{
-			"url": "art/simpleWorld/button/radio_selected.png",
-			"type": "image",
-			"name": "radio_selected_png"
-		},
-		{
-			"url": "art/simpleWorld/button/radio_unselected.png",
-			"type": "image",
-			"name": "radio_unselected_png"
 		},
 		{
 			"url": "art/player/player_male_3.jpg",
@@ -323,42 +278,279 @@
 			"name": "player_male_2_jpg"
 		},
 		{
-			"url": "art/simpleWorld/button/combobox_down.png",
+			"name": "board_hint2_png",
 			"type": "image",
-			"name": "combobox_down_png",
-			"scale9grid": "3,2,43,22"
+			"url": "art/board/board_hint.png"
 		},
 		{
-			"url": "art/simpleWorld/button/combobox_up.png",
+			"name": "board_input2_png",
 			"type": "image",
-			"name": "combobox_up_png",
-			"scale9grid": "3,2,43,22"
+			"url": "art/board/board_input.png"
 		},
 		{
-			"url": "art/simpleWorld/button/numericstepper_down_down.png",
+			"name": "board_popup2_png",
 			"type": "image",
-			"name": "numericstepper_down_down_png"
+			"url": "art/board/board_popup.png"
 		},
 		{
-			"url": "art/simpleWorld/button/numericstepper_down_up.png",
+			"name": "board_tip2_png",
 			"type": "image",
-			"name": "numericstepper_down_up_png"
+			"url": "art/board/board_tip.png"
 		},
 		{
-			"url": "art/simpleWorld/button/numericstepper_up_down.png",
+			"name": "player_child_12_png",
 			"type": "image",
-			"name": "numericstepper_up_down_png"
+			"url": "art/player/player_child_1.png"
 		},
 		{
-			"url": "art/simpleWorld/button/numericstepper_up_up.png",
+			"name": "player_child_102_png",
 			"type": "image",
-			"name": "numericstepper_up_up_png"
+			"url": "art/player/player_child_10.png"
 		},
 		{
-			"url": "art/simpleWorld/button/box_border.png",
+			"name": "player_child_22_png",
 			"type": "image",
+			"url": "art/player/player_child_2.png"
+		},
+		{
+			"name": "player_child_32_png",
+			"type": "image",
+			"url": "art/player/player_child_3.png"
+		},
+		{
+			"name": "player_child_42_png",
+			"type": "image",
+			"url": "art/player/player_child_4.png"
+		},
+		{
+			"name": "player_child_52_png",
+			"type": "image",
+			"url": "art/player/player_child_5.png"
+		},
+		{
+			"name": "player_child_62_png",
+			"type": "image",
+			"url": "art/player/player_child_6.png"
+		},
+		{
+			"name": "player_child_72_png",
+			"type": "image",
+			"url": "art/player/player_child_7.png"
+		},
+		{
+			"name": "player_child_82_png",
+			"type": "image",
+			"url": "art/player/player_child_8.png"
+		},
+		{
+			"name": "player_child_92_png",
+			"type": "image",
+			"url": "art/player/player_child_9.png"
+		},
+		{
+			"name": "player_female_12_jpg",
+			"type": "image",
+			"url": "art/player/player_female_1.jpg"
+		},
+		{
+			"name": "player_female_102_jpg",
+			"type": "image",
+			"url": "art/player/player_female_10.jpg"
+		},
+		{
+			"name": "player_female_22_jpg",
+			"type": "image",
+			"url": "art/player/player_female_2.jpg"
+		},
+		{
+			"name": "player_female_32_jpg",
+			"type": "image",
+			"url": "art/player/player_female_3.jpg"
+		},
+		{
+			"name": "player_female_42_jpg",
+			"type": "image",
+			"url": "art/player/player_female_4.jpg"
+		},
+		{
+			"name": "player_female_52_jpg",
+			"type": "image",
+			"url": "art/player/player_female_5.jpg"
+		},
+		{
+			"name": "player_female_62_jpg",
+			"type": "image",
+			"url": "art/player/player_female_6.jpg"
+		},
+		{
+			"name": "player_female_72_jpg",
+			"type": "image",
+			"url": "art/player/player_female_7.jpg"
+		},
+		{
+			"name": "player_female_82_jpg",
+			"type": "image",
+			"url": "art/player/player_female_8.jpg"
+		},
+		{
+			"name": "player_female_92_jpg",
+			"type": "image",
+			"url": "art/player/player_female_9.jpg"
+		},
+		{
+			"name": "player_male_12_jpg",
+			"type": "image",
+			"url": "art/player/player_male_1.jpg"
+		},
+		{
+			"name": "player_male_102_jpg",
+			"type": "image",
+			"url": "art/player/player_male_10.jpg"
+		},
+		{
+			"name": "player_male_22_jpg",
+			"type": "image",
+			"url": "art/player/player_male_2.jpg"
+		},
+		{
+			"name": "player_male_32_jpg",
+			"type": "image",
+			"url": "art/player/player_male_3.jpg"
+		},
+		{
+			"name": "player_male_42_jpg",
+			"type": "image",
+			"url": "art/player/player_male_4.jpg"
+		},
+		{
+			"name": "player_male_52_jpg",
+			"type": "image",
+			"url": "art/player/player_male_5.jpg"
+		},
+		{
+			"name": "player_male_62_jpg",
+			"type": "image",
+			"url": "art/player/player_male_6.jpg"
+		},
+		{
+			"name": "player_male_72_jpg",
+			"type": "image",
+			"url": "art/player/player_male_7.jpg"
+		},
+		{
+			"name": "player_male_82_jpg",
+			"type": "image",
+			"url": "art/player/player_male_8.jpg"
+		},
+		{
+			"name": "player_male_92_jpg",
+			"type": "image",
+			"url": "art/player/player_male_9.jpg"
+		},
+		{
 			"name": "box_border_png",
-			"scale9grid": "3,2,43,22"
+			"type": "image",
+			"url": "art/simpleWorld/button/box_border.png"
+		},
+		{
+			"name": "btn_next_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/btn_next.png"
+		},
+		{
+			"name": "btn_next_down_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/btn_next_down.png"
+		},
+		{
+			"name": "btn_next_on_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/btn_next_on.png"
+		},
+		{
+			"name": "btn_prev_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/btn_prev.png"
+		},
+		{
+			"name": "btn_prev_down_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/btn_prev_down.png"
+		},
+		{
+			"name": "btn_prev_on_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/btn_prev_on.png"
+		},
+		{
+			"name": "combobox_down_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/combobox_down.png"
+		},
+		{
+			"name": "combobox_list_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/combobox_list.png"
+		},
+		{
+			"name": "combobox_list_ctrl_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/combobox_list_ctrl.png"
+		},
+		{
+			"name": "combobox_list_down_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/combobox_list_down.png"
+		},
+		{
+			"name": "combobox_list_up_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/combobox_list_up.png"
+		},
+		{
+			"name": "combobox_up_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/combobox_up.png"
+		},
+		{
+			"name": "numericstepper_down_down_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/numericstepper_down_down.png"
+		},
+		{
+			"name": "numericstepper_down_up_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/numericstepper_down_up.png"
+		},
+		{
+			"name": "numericstepper_up_down_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/numericstepper_up_down.png"
+		},
+		{
+			"name": "numericstepper_up_up_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/numericstepper_up_up.png"
+		},
+		{
+			"name": "radio_selected_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/radio_selected.png"
+		},
+		{
+			"name": "radio_unselected_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/radio_unselected.png"
+		},
+		{
+			"name": "radio_unselected_over_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/radio_unselected_over.png"
+		},
+		{
+			"name": "未标题-2_png",
+			"type": "image",
+			"url": "art/simpleWorld/button/未标题-2.png"
 		}
 	]
 }
