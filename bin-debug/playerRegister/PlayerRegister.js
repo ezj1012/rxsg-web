@@ -48,7 +48,10 @@ var PlayerRegister = (function (_super) {
     function PlayerRegister() {
         var _this = _super.call(this) || this;
         _this.handMouseEvent = function (evt) {
-            console.log(evt.type);
+            // console.log(evt.type);
+            if (_this.tt != null) {
+                _this.tt.handMouseMoveEvent(evt);
+            }
             if (_this.worldMap != null) {
                 _this.worldMap.handMouseEvent(evt);
             }
@@ -95,9 +98,9 @@ var PlayerRegister = (function (_super) {
         });
     };
     PlayerRegister.prototype.onGroupComplete = function () {
-        var tt = new RxsgSelectList();
-        tt.setH(300);
-        this.addChild(tt);
+        this.tt = new RxsgSelectList();
+        // this.tt.setH(300);
+        this.addChild(this.tt);
         // this.worldMap = new RegisterWorldMap();
         // this.worldMap.x = 335;
         // this.worldMap.y = 64;

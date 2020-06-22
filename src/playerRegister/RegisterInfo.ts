@@ -159,7 +159,7 @@ class RegisterInfo extends egret.Sprite {
 
 
         let nbImg = new egret.Bitmap();
-        nbImg.texture = RES.getRes("box_border_png");
+        nbImg.texture = RES.getRes("box_border_l_shadow_png");
         nbImg.width = 145;
         nbImg.height = 26;
         nbImg.x = 100;
