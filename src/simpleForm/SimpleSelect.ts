@@ -17,7 +17,7 @@ class SimpleSelect extends egret.Sprite {
 		this.backImg.texture = this.upIcon;
 		this.addChild(this.backImg);
 	}
-
+	
 	public getImg() {
 		return this.backImg;
 	}

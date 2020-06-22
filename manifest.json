@@ -8,17 +8,19 @@
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
-		"bin-debug/simpleEvent/CanvasEventAdapter.js",
+		"bin-debug/simpleEvent/KeyDownEvent.js",
 		"bin-debug/Main.js",
 		"bin-debug/MouseEventHolder.js",
 		"bin-debug/MyGrid.js",
 		"bin-debug/playerRegister/PlayerRegister.js",
 		"bin-debug/playerRegister/RegisterInfo.js",
 		"bin-debug/playerRegister/RegisterWorldMap.js",
+		"bin-debug/simpleEvent/CanvasEventAdapter.js",
 		"bin-debug/MEL.js",
-		"bin-debug/simpleEvent/KeyDownEvent.js",
 		"bin-debug/simpleEvent/MousePoint.js",
 		"bin-debug/simpleEvent/SimpleMouseEvent.js",
+		"bin-debug/simpleForm/RxsgSelect.js",
+		"bin-debug/simpleForm/RxsgSelectList.js",
 		"bin-debug/simpleForm/SimpleButton.js",
 		"bin-debug/simpleForm/SimpleRadio.js",
 		"bin-debug/simpleForm/SimpleSelect.js"

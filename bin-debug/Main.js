@@ -64,12 +64,8 @@ var Main = (function (_super) {
                         this.addEventListener(SimpleMouseEvent.DOWN, this.playerRegister.handMouseEvent, this);
                         this.addEventListener(SimpleMouseEvent.UP, this.playerRegister.handMouseEvent, this);
                         this.addEventListener(SimpleMouseEvent.CLICK, this.playerRegister.handMouseEvent, this);
-                        // this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
-                        // RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
                         return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
-                        // this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onClick, this);
-                        // RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComplete, this);
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -80,12 +76,6 @@ var Main = (function (_super) {
         this.playerRegister.onKeyDown(e);
     };
     Main.prototype.onGroupComplete = function () {
-        // this.playerRegister = new PlayerRegister();
-        // this.addChild(img);
-        // this.addChild(this.playerRegister);
-        // let bckImg: egret.Bitmap = new egret.Bitmap();
-        // bckImg.texture = RES.getRes("sanguo_map_png");
-        // this.addChild(bckImg);
     };
     return Main;
 }(egret.DisplayObjectContainer));

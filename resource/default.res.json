@@ -5,7 +5,7 @@
 			"name": "preload"
 		},
 		{
-			"keys": "yuzhou_png,yunzhou_png,youzhou_png,yizhou_png,yangzhou_png,xuzhou_png,silv_png,sanguo_map_png,qingzhou_png,liangzhou_png,jizhou_png,jingzhou_png,jiaozhou_png,bingzhou_png",
+			"keys": "yuzhou_png,yunzhou_png,youzhou_png,yizhou_png,yangzhou_png,xuzhou_png,silv_png,sanguo_map_png,qingzhou_png,liangzhou_png,jizhou_png,jingzhou_png,jiaozhou_png,bingzhou_png,未标题-2_png,box_border_png,btn_next_down_png,btn_next_on_png,btn_next_png,btn_prev_down_png,btn_prev_on_png,btn_prev_png,combobox_down_png,combobox_list_ctrl_png,combobox_list_down_png,combobox_list_up_png,combobox_list_png,combobox_up_png,numericstepper_down_down_png,numericstepper_down_up_png,numericstepper_up_down_png,numericstepper_up_up_png,radio_selected_png,radio_unselected_over_png,radio_unselected_png",
 			"name": "simpleWorld"
 		},
 		{
@@ -278,279 +278,282 @@
 			"name": "player_male_2_jpg"
 		},
 		{
-			"name": "board_hint2_png",
+			"url": "art/board/board_hint.png",
 			"type": "image",
-			"url": "art/board/board_hint.png"
+			"name": "board_hint2_png"
 		},
 		{
-			"name": "board_input2_png",
+			"url": "art/board/board_input.png",
 			"type": "image",
-			"url": "art/board/board_input.png"
+			"name": "board_input2_png"
 		},
 		{
-			"name": "board_popup2_png",
+			"url": "art/board/board_popup.png",
 			"type": "image",
-			"url": "art/board/board_popup.png"
+			"name": "board_popup2_png"
 		},
 		{
-			"name": "board_tip2_png",
+			"url": "art/board/board_tip.png",
 			"type": "image",
-			"url": "art/board/board_tip.png"
+			"name": "board_tip2_png"
 		},
 		{
-			"name": "player_child_12_png",
+			"url": "art/player/player_child_1.png",
 			"type": "image",
-			"url": "art/player/player_child_1.png"
+			"name": "player_child_12_png"
 		},
 		{
-			"name": "player_child_102_png",
+			"url": "art/player/player_child_10.png",
 			"type": "image",
-			"url": "art/player/player_child_10.png"
+			"name": "player_child_102_png"
 		},
 		{
-			"name": "player_child_22_png",
+			"url": "art/player/player_child_2.png",
 			"type": "image",
-			"url": "art/player/player_child_2.png"
+			"name": "player_child_22_png"
 		},
 		{
-			"name": "player_child_32_png",
+			"url": "art/player/player_child_3.png",
 			"type": "image",
-			"url": "art/player/player_child_3.png"
+			"name": "player_child_32_png"
 		},
 		{
-			"name": "player_child_42_png",
+			"url": "art/player/player_child_4.png",
 			"type": "image",
-			"url": "art/player/player_child_4.png"
+			"name": "player_child_42_png"
 		},
 		{
-			"name": "player_child_52_png",
+			"url": "art/player/player_child_5.png",
 			"type": "image",
-			"url": "art/player/player_child_5.png"
+			"name": "player_child_52_png"
 		},
 		{
-			"name": "player_child_62_png",
+			"url": "art/player/player_child_6.png",
 			"type": "image",
-			"url": "art/player/player_child_6.png"
+			"name": "player_child_62_png"
 		},
 		{
-			"name": "player_child_72_png",
+			"url": "art/player/player_child_7.png",
 			"type": "image",
-			"url": "art/player/player_child_7.png"
+			"name": "player_child_72_png"
 		},
 		{
-			"name": "player_child_82_png",
+			"url": "art/player/player_child_8.png",
 			"type": "image",
-			"url": "art/player/player_child_8.png"
+			"name": "player_child_82_png"
 		},
 		{
-			"name": "player_child_92_png",
+			"url": "art/player/player_child_9.png",
 			"type": "image",
-			"url": "art/player/player_child_9.png"
+			"name": "player_child_92_png"
 		},
 		{
-			"name": "player_female_12_jpg",
+			"url": "art/player/player_female_1.jpg",
 			"type": "image",
-			"url": "art/player/player_female_1.jpg"
+			"name": "player_female_12_jpg"
 		},
 		{
-			"name": "player_female_102_jpg",
+			"url": "art/player/player_female_10.jpg",
 			"type": "image",
-			"url": "art/player/player_female_10.jpg"
+			"name": "player_female_102_jpg"
 		},
 		{
-			"name": "player_female_22_jpg",
+			"url": "art/player/player_female_2.jpg",
 			"type": "image",
-			"url": "art/player/player_female_2.jpg"
+			"name": "player_female_22_jpg"
 		},
 		{
-			"name": "player_female_32_jpg",
+			"url": "art/player/player_female_3.jpg",
 			"type": "image",
-			"url": "art/player/player_female_3.jpg"
+			"name": "player_female_32_jpg"
 		},
 		{
-			"name": "player_female_42_jpg",
+			"url": "art/player/player_female_4.jpg",
 			"type": "image",
-			"url": "art/player/player_female_4.jpg"
+			"name": "player_female_42_jpg"
 		},
 		{
-			"name": "player_female_52_jpg",
+			"url": "art/player/player_female_5.jpg",
 			"type": "image",
-			"url": "art/player/player_female_5.jpg"
+			"name": "player_female_52_jpg"
 		},
 		{
-			"name": "player_female_62_jpg",
+			"url": "art/player/player_female_6.jpg",
 			"type": "image",
-			"url": "art/player/player_female_6.jpg"
+			"name": "player_female_62_jpg"
 		},
 		{
-			"name": "player_female_72_jpg",
+			"url": "art/player/player_female_7.jpg",
 			"type": "image",
-			"url": "art/player/player_female_7.jpg"
+			"name": "player_female_72_jpg"
 		},
 		{
-			"name": "player_female_82_jpg",
+			"url": "art/player/player_female_8.jpg",
 			"type": "image",
-			"url": "art/player/player_female_8.jpg"
+			"name": "player_female_82_jpg"
 		},
 		{
-			"name": "player_female_92_jpg",
+			"url": "art/player/player_female_9.jpg",
 			"type": "image",
-			"url": "art/player/player_female_9.jpg"
+			"name": "player_female_92_jpg"
 		},
 		{
-			"name": "player_male_12_jpg",
+			"url": "art/player/player_male_1.jpg",
 			"type": "image",
-			"url": "art/player/player_male_1.jpg"
+			"name": "player_male_12_jpg"
 		},
 		{
-			"name": "player_male_102_jpg",
+			"url": "art/player/player_male_10.jpg",
 			"type": "image",
-			"url": "art/player/player_male_10.jpg"
+			"name": "player_male_102_jpg"
 		},
 		{
-			"name": "player_male_22_jpg",
+			"url": "art/player/player_male_2.jpg",
 			"type": "image",
-			"url": "art/player/player_male_2.jpg"
+			"name": "player_male_22_jpg"
 		},
 		{
-			"name": "player_male_32_jpg",
+			"url": "art/player/player_male_3.jpg",
 			"type": "image",
-			"url": "art/player/player_male_3.jpg"
+			"name": "player_male_32_jpg"
 		},
 		{
-			"name": "player_male_42_jpg",
+			"url": "art/player/player_male_4.jpg",
 			"type": "image",
-			"url": "art/player/player_male_4.jpg"
+			"name": "player_male_42_jpg"
 		},
 		{
-			"name": "player_male_52_jpg",
+			"url": "art/player/player_male_5.jpg",
 			"type": "image",
-			"url": "art/player/player_male_5.jpg"
+			"name": "player_male_52_jpg"
 		},
 		{
-			"name": "player_male_62_jpg",
+			"url": "art/player/player_male_6.jpg",
 			"type": "image",
-			"url": "art/player/player_male_6.jpg"
+			"name": "player_male_62_jpg"
 		},
 		{
-			"name": "player_male_72_jpg",
+			"url": "art/player/player_male_7.jpg",
 			"type": "image",
-			"url": "art/player/player_male_7.jpg"
+			"name": "player_male_72_jpg"
 		},
 		{
-			"name": "player_male_82_jpg",
+			"url": "art/player/player_male_8.jpg",
 			"type": "image",
-			"url": "art/player/player_male_8.jpg"
+			"name": "player_male_82_jpg"
 		},
 		{
-			"name": "player_male_92_jpg",
+			"url": "art/player/player_male_9.jpg",
 			"type": "image",
-			"url": "art/player/player_male_9.jpg"
+			"name": "player_male_92_jpg"
 		},
 		{
-			"name": "box_border_png",
+			"url": "art/simpleWorld/button/box_border.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/box_border.png"
+			"name": "box_border_png"
 		},
 		{
-			"name": "btn_next_png",
+			"url": "art/simpleWorld/button/btn_next.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/btn_next.png"
+			"name": "btn_next_png"
 		},
 		{
-			"name": "btn_next_down_png",
+			"url": "art/simpleWorld/button/btn_next_down.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/btn_next_down.png"
+			"name": "btn_next_down_png"
 		},
 		{
-			"name": "btn_next_on_png",
+			"url": "art/simpleWorld/button/btn_next_on.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/btn_next_on.png"
+			"name": "btn_next_on_png"
 		},
 		{
-			"name": "btn_prev_png",
+			"url": "art/simpleWorld/button/btn_prev.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/btn_prev.png"
+			"name": "btn_prev_png"
 		},
 		{
-			"name": "btn_prev_down_png",
+			"url": "art/simpleWorld/button/btn_prev_down.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/btn_prev_down.png"
+			"name": "btn_prev_down_png"
 		},
 		{
-			"name": "btn_prev_on_png",
+			"url": "art/simpleWorld/button/btn_prev_on.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/btn_prev_on.png"
+			"name": "btn_prev_on_png"
 		},
 		{
+			"url": "art/simpleWorld/button/combobox_down.png",
+			"type": "image",
 			"name": "combobox_down_png",
-			"type": "image",
-			"url": "art/simpleWorld/button/combobox_down.png"
+			"scale9grid": "3,2,43,22"
 		},
 		{
+			"url": "art/simpleWorld/button/combobox_list.png",
+			"type": "image",
 			"name": "combobox_list_png",
-			"type": "image",
-			"url": "art/simpleWorld/button/combobox_list.png"
+			"scale9grid": "2,17,12,16"
 		},
 		{
-			"name": "combobox_list_ctrl_png",
+			"url": "art/simpleWorld/button/combobox_list_ctrl.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/combobox_list_ctrl.png"
+			"name": "combobox_list_ctrl_png"
 		},
 		{
-			"name": "combobox_list_down_png",
+			"url": "art/simpleWorld/button/combobox_list_down.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/combobox_list_down.png"
+			"name": "combobox_list_down_png"
 		},
 		{
-			"name": "combobox_list_up_png",
+			"url": "art/simpleWorld/button/combobox_list_up.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/combobox_list_up.png"
+			"name": "combobox_list_up_png"
 		},
 		{
+			"url": "art/simpleWorld/button/combobox_up.png",
+			"type": "image",
 			"name": "combobox_up_png",
-			"type": "image",
-			"url": "art/simpleWorld/button/combobox_up.png"
+			"scale9grid": "3,2,43,22"
 		},
 		{
-			"name": "numericstepper_down_down_png",
+			"url": "art/simpleWorld/button/numericstepper_down_down.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/numericstepper_down_down.png"
+			"name": "numericstepper_down_down_png"
 		},
 		{
-			"name": "numericstepper_down_up_png",
+			"url": "art/simpleWorld/button/numericstepper_down_up.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/numericstepper_down_up.png"
+			"name": "numericstepper_down_up_png"
 		},
 		{
-			"name": "numericstepper_up_down_png",
+			"url": "art/simpleWorld/button/numericstepper_up_down.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/numericstepper_up_down.png"
+			"name": "numericstepper_up_down_png"
 		},
 		{
-			"name": "numericstepper_up_up_png",
+			"url": "art/simpleWorld/button/numericstepper_up_up.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/numericstepper_up_up.png"
+			"name": "numericstepper_up_up_png"
 		},
 		{
-			"name": "radio_selected_png",
+			"url": "art/simpleWorld/button/radio_selected.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/radio_selected.png"
+			"name": "radio_selected_png"
 		},
 		{
-			"name": "radio_unselected_png",
+			"url": "art/simpleWorld/button/radio_unselected.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/radio_unselected.png"
+			"name": "radio_unselected_png"
 		},
 		{
-			"name": "radio_unselected_over_png",
+			"url": "art/simpleWorld/button/radio_unselected_over.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/radio_unselected_over.png"
+			"name": "radio_unselected_over_png"
 		},
 		{
-			"name": "未标题-2_png",
+			"url": "art/simpleWorld/button/未标题-2.png",
 			"type": "image",
-			"url": "art/simpleWorld/button/未标题-2.png"
+			"name": "未标题-2_png"
 		}
 	]
 }

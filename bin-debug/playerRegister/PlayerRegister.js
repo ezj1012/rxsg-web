@@ -95,14 +95,17 @@ var PlayerRegister = (function (_super) {
         });
     };
     PlayerRegister.prototype.onGroupComplete = function () {
-        this.worldMap = new RegisterWorldMap();
-        this.worldMap.x = 335;
-        this.worldMap.y = 64;
-        this.worldMap.width = 620;
-        this.worldMap.height = 500;
-        this.register = new RegisterInfo();
-        this.addChild(this.register);
-        this.addChild(this.worldMap);
+        var tt = new RxsgSelectList();
+        tt.setH(300);
+        this.addChild(tt);
+        // this.worldMap = new RegisterWorldMap();
+        // this.worldMap.x = 335;
+        // this.worldMap.y = 64;
+        // this.worldMap.width = 620;
+        // this.worldMap.height = 500;
+        // this.register = new RegisterInfo();
+        // this.addChild(this.register);
+        // this.addChild(this.worldMap);
     };
     return PlayerRegister;
 }(egret.Sprite));

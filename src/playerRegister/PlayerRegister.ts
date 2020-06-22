@@ -21,17 +21,21 @@ class PlayerRegister extends egret.Sprite {
 	}
 
 	private onGroupComplete() {
-		this.worldMap = new RegisterWorldMap();
-		this.worldMap.x = 335;
-		this.worldMap.y = 64;
-		this.worldMap.width = 620;
-		this.worldMap.height = 500;
+		let tt =new RxsgSelectList();
+		tt.setH(300);
+		this.addChild(tt);
 
-		this.register = new RegisterInfo();
+		// this.worldMap = new RegisterWorldMap();
+		// this.worldMap.x = 335;
+		// this.worldMap.y = 64;
+		// this.worldMap.width = 620;
+		// this.worldMap.height = 500;
+
+		// this.register = new RegisterInfo();
 
 
-		this.addChild(this.register);
-		this.addChild(this.worldMap);
+		// this.addChild(this.register);
+		// this.addChild(this.worldMap);
 
 	}
 
