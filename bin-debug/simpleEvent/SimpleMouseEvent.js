@@ -25,10 +25,17 @@ var SimpleMouseEvent = (function (_super) {
     SimpleMouseEvent.prototype.getY = function () {
         return this.y;
     };
+    SimpleMouseEvent.prototype.getDeltaY = function () {
+        return this.deltaY;
+    };
+    SimpleMouseEvent.prototype.setDeltaY = function (y) {
+        this.deltaY = y;
+    };
     SimpleMouseEvent.MOVE = "MOVE";
     SimpleMouseEvent.DOWN = "DOWN";
     SimpleMouseEvent.UP = "UP";
     SimpleMouseEvent.CLICK = "CLICK";
+    SimpleMouseEvent.WHEEL = "WHEEL";
     return SimpleMouseEvent;
 }(egret.Event));
 __reflect(SimpleMouseEvent.prototype, "SimpleMouseEvent");

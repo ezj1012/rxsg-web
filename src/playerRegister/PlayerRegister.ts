@@ -2,7 +2,7 @@ class PlayerRegister extends egret.Sprite {
 
 	worldMap: RegisterWorldMap;
 	register: RegisterInfo;
-	tt: RxsgSelectList;
+	tt: RxsgSelect;
 	public constructor() {
 		super();
 		this.x = 0;
@@ -21,7 +21,7 @@ class PlayerRegister extends egret.Sprite {
 	}
 
 	private onGroupComplete() {
-		this.tt = new RxsgSelectList();
+		this.tt = new RxsgSelect(null);
 		// this.tt.setH(300);
 		this.addChild(this.tt);
 

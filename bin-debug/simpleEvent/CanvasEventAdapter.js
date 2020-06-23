@@ -4,6 +4,11 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var CanvasEventAdapter = (function () {
     function CanvasEventAdapter(container) {
         var _this = this;
+        this.onMouseWhell = function (evt) {
+            var temp = _this.getPoint(evt.currentTarget, evt.x, evt.y, SimpleMouseEvent.WHEEL);
+            temp.setDeltaY(evt.deltaY);
+            _this.container.dispatchEvent(temp);
+        };
         this.onKeyDown = function (e) {
             // console.log(e);
             var temp = new KeyDownEvent(KeyDownEvent.KEY_DOWN);
@@ -32,6 +37,7 @@ var CanvasEventAdapter = (function () {
         this.canvas.addEventListener('mousedown', this.onDown);
         this.canvas.addEventListener('mouseup', this.onUp);
         this.canvas.addEventListener('click', this.onClick);
+        this.canvas.addEventListener('mousewheel', this.onMouseWhell);
         document.addEventListener('keydown', this.onKeyDown);
     }
     CanvasEventAdapter.prototype.getPoint = function (canvas, x, y, evtType) {

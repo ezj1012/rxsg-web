@@ -9,8 +9,16 @@ class CanvasEventAdapter {
 		this.canvas.addEventListener('mousedown', this.onDown);
 		this.canvas.addEventListener('mouseup', this.onUp);
 		this.canvas.addEventListener('click', this.onClick);
+		this.canvas.addEventListener('mousewheel', this.onMouseWhell);
 		document.addEventListener('keydown', this.onKeyDown);
 
+
+	}
+
+	private onMouseWhell = (evt: WheelEvent) => {
+		let temp: SimpleMouseEvent = this.getPoint(evt.currentTarget, evt.x, evt.y, SimpleMouseEvent.WHEEL);
+		temp.setDeltaY(evt.deltaY);
+		this.container.dispatchEvent(temp);
 	}
 
 	private onKeyDown = (e: KeyboardEvent) => {

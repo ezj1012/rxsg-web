@@ -98,7 +98,7 @@ var PlayerRegister = (function (_super) {
         });
     };
     PlayerRegister.prototype.onGroupComplete = function () {
-        this.tt = new RxsgSelectList();
+        this.tt = new RxsgSelect(null);
         // this.tt.setH(300);
         this.addChild(this.tt);
         // this.worldMap = new RegisterWorldMap();

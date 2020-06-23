@@ -30,11 +30,13 @@ class RxsgSelectList extends egret.Sprite {
 	private displayStartIdx: number;//页面看到的第一个元素点
 	private moveInIdx: number = -1;	//从0开始
 
-	public constructor() {
+	private updateSelectNotifyFun: Function;
+
+	public constructor(datas: Array<string>, updateSelectNotifyFun: Function) {
 		super();
-		this.datas = [
-			"随机", "司隶", "冀州", "豫州", "兖州", "徐州", "青州", "荆州", "扬州", "益州", "凉州", "并州", "幽州", "交州"
-		];
+		this.updateSelectNotifyFun = updateSelectNotifyFun;
+		this.datas = datas;
+
 		let showSize = 7;
 		if (showSize > this.datas.length) {
 			showSize = this.datas.length;
@@ -84,10 +86,9 @@ class RxsgSelectList extends egret.Sprite {
 		for (let i = 0; i < this.showSize; i++) {
 			this.addChild(this.showItems[i]);
 		}
-
-
-
 	}
+
+
 
 	private getShowDataByIdx(idx: number) {
 		let result: Array<string> = [];
@@ -112,8 +113,8 @@ class RxsgSelectList extends egret.Sprite {
 		let result: Array<string> = [];
 		if (this.selectIdx == 0) {
 			sIdx = 0;
-		} else if (this.selectIdx + this.showSize < this.datas.length) {
-			sIdx = this.selectIdx + 1;
+		} else if (this.selectIdx + this.showSize - 1 < this.datas.length) {
+			sIdx = this.selectIdx - 1;
 		} else {
 			sIdx = this.datas.length - this.showSize;
 		}
@@ -139,21 +140,6 @@ class RxsgSelectList extends egret.Sprite {
 
 	public handMouseMoveEvent(evt: SimpleMouseEvent, shapeFlag: boolean = false) {
 		if (evt.type == SimpleMouseEvent.MOVE) {
-
-			let ox = evt.getX() - this.x;
-			let oy = evt.getY() - this.y - 1;
-			if (ox > 0 && ox < this.width - 18 &&
-				oy > 0 && oy < this.height - 1) {
-				let f = Math.floor(oy / RxsgSelectList.itemHeight);
-				if (f == this.moveInIdx) { return; }
-				this.restoreBack(this.moveInIdx);
-				this.showItems[f].background = true;
-				this.showItems[f].backgroundColor = this.selectHoveBC;
-				this.moveInIdx = f;
-			} else {
-				this.restoreBack(this.moveInIdx);
-			}
-
 			if (this.ctrlImg.hitTestPoint(evt.getX(), evt.getY())) {
 				if (!this.ctrlHove) {
 					this.ctrlHove = true;
@@ -171,18 +157,18 @@ class RxsgSelectList extends egret.Sprite {
 				this.ctrlCanMove = true;
 				this.ctrlStartY = evt.getY();
 				return;
-			}
-			if (!this.upClick && this.upImg.hitTestPoint(evt.getX(), evt.getY())) {
+			} else if (this.listHitTestPoint(evt)) {
+				let f = this.listHitIndex(evt);
+				this.updateSelect(this.displayStartIdx + f);
+			} else if (!this.upClick && this.upImg.hitTestPoint(evt.getX(), evt.getY())) {
 				this.upImg.texture = this.down;
 				this.upClick = true;
 				return;
-			}
-			if (!this.downClick && this.downImg.hitTestPoint(evt.getX(), evt.getY())) {
+			} else if (!this.downClick && this.downImg.hitTestPoint(evt.getX(), evt.getY())) {
 				this.downImg.texture = this.down;
 				this.downClick = true;
 				return;
 			}
-
 		} else if (evt.type == SimpleMouseEvent.UP) {
 			this.ctrlCanMove = false;
 			if (this.upClick) {
@@ -197,6 +183,25 @@ class RxsgSelectList extends egret.Sprite {
 				this.onDownClick();
 				return;
 			}
+		} else if (evt.type == SimpleMouseEvent.WHEEL) {
+			if (evt.getDeltaY() < 0) {
+				this.onUpClick();
+			} else if (evt.getDeltaY() > 0) {
+				this.onDownClick();
+			}
+		}
+
+
+		if (this.listHitTestPoint(evt)) {
+			let f = this.listHitIndex(evt);
+			if (f != this.moveInIdx) {
+				this.restoreBack(this.moveInIdx);
+				this.moveInIdx = f;
+			}
+			this.showItems[f].background = true;
+			this.showItems[f].backgroundColor = this.selectHoveBC;
+		} else {
+			this.restoreBack(this.moveInIdx);
 		}
 	}
 
@@ -206,7 +211,20 @@ class RxsgSelectList extends egret.Sprite {
 		this.updatePosition();
 	}
 
+	private listHitTestPoint(evt: SimpleMouseEvent) {
+		let ox = evt.getX() - this.x;
+		let oy = evt.getY() - this.y - 1;
+		return ox > 0 && ox < this.width - 18 && oy > 0 && oy < this.height - 1;
+	}
 
+	private listHitIndex(evt: SimpleMouseEvent) {
+		let oy = evt.getY() - this.y - 1;
+		let f = Math.floor(oy / RxsgSelectList.itemHeight);
+		//修正部分计算错误的情况
+		f = f < 0 ? 0 : f;
+		f = f >= this.showSize ? this.showSize - 1 : f;
+		return f;
+	}
 
 
 	public setSize(w: number, h: number) {
@@ -226,6 +244,22 @@ class RxsgSelectList extends egret.Sprite {
 		this.updateCtrlPosistion();
 	}
 
+	public updateSelect(selectIdx: number) {
+		if (selectIdx < 0 || selectIdx >= this.datas.length) {
+			console.log('下来选择框值输入错误!');
+		}
+		this.selectIdx = selectIdx;
+		this.updateList(this.getShowData());
+		this.ctrlOY = this.ctrlOneY * this.displayStartIdx;
+		this.updateCtrlPosistion();
+		if (this.updateSelectNotifyFun) {
+			this.updateSelectNotifyFun(this.getSelected());
+		}
+	}
+
+	public getSelected(): number {
+		return this.selectIdx;
+	}
 
 	private moveCtrl(move: number) {
 		let moved = false;

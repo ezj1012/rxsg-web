@@ -3,9 +3,11 @@ class SimpleMouseEvent extends egret.Event {
 	public static DOWN: string = "DOWN";
 	public static UP: string = "UP";
 	public static CLICK: string = "CLICK";
+	public static WHEEL: string = "WHEEL";
 
 	private x: number;
 	private y: number;
+	private deltaY: number;
 	public constructor(type: string, bubbles: boolean = false, cancelable: boolean = false) {
 		super(type, bubbles, cancelable);
 	}
@@ -20,6 +22,13 @@ class SimpleMouseEvent extends egret.Event {
 
 	public getY(): number {
 		return this.y;
+	}
+
+	public getDeltaY() {
+		return this.deltaY;
+	}
+	public setDeltaY(y: number) {
+		this.deltaY = y;
 	}
 
 }

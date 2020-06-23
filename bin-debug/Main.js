@@ -64,6 +64,7 @@ var Main = (function (_super) {
                         this.addEventListener(SimpleMouseEvent.DOWN, this.playerRegister.handMouseEvent, this);
                         this.addEventListener(SimpleMouseEvent.UP, this.playerRegister.handMouseEvent, this);
                         this.addEventListener(SimpleMouseEvent.CLICK, this.playerRegister.handMouseEvent, this);
+                        this.addEventListener(SimpleMouseEvent.WHEEL, this.playerRegister.handMouseEvent, this);
                         return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
                         _a.sent();

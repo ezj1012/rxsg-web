@@ -10,7 +10,7 @@ r.prototype = e.prototype, t.prototype = new r();
 };
 var RxsgSelectList = (function (_super) {
     __extends(RxsgSelectList, _super);
-    function RxsgSelectList() {
+    function RxsgSelectList(datas, updateSelectNotifyFun) {
         var _this = _super.call(this) || this;
         _this.ctrlOY = 0;
         _this.ctrlOneY = 0;
@@ -28,9 +28,8 @@ var RxsgSelectList = (function (_super) {
             _this.ctrlOY = _this.ctrlOneY * _this.displayStartIdx;
             _this.updateCtrlPosistion();
         };
-        _this.datas = [
-            "随机", "司隶", "冀州", "豫州", "兖州", "徐州", "青州", "荆州", "扬州", "益州", "凉州", "并州", "幽州", "交州"
-        ];
+        _this.updateSelectNotifyFun = updateSelectNotifyFun;
+        _this.datas = datas;
         var showSize = 7;
         if (showSize > _this.datas.length) {
             showSize = _this.datas.length;
@@ -96,8 +95,8 @@ var RxsgSelectList = (function (_super) {
         if (this.selectIdx == 0) {
             sIdx = 0;
         }
-        else if (this.selectIdx + this.showSize < this.datas.length) {
-            sIdx = this.selectIdx + 1;
+        else if (this.selectIdx + this.showSize - 1 < this.datas.length) {
+            sIdx = this.selectIdx - 1;
         }
         else {
             sIdx = this.datas.length - this.showSize;
@@ -123,22 +122,6 @@ var RxsgSelectList = (function (_super) {
     RxsgSelectList.prototype.handMouseMoveEvent = function (evt, shapeFlag) {
         if (shapeFlag === void 0) { shapeFlag = false; }
         if (evt.type == SimpleMouseEvent.MOVE) {
-            var ox = evt.getX() - this.x;
-            var oy = evt.getY() - this.y - 1;
-            if (ox > 0 && ox < this.width - 18 &&
-                oy > 0 && oy < this.height - 1) {
-                var f = Math.floor(oy / RxsgSelectList.itemHeight);
-                if (f == this.moveInIdx) {
-                    return;
-                }
-                this.restoreBack(this.moveInIdx);
-                this.showItems[f].background = true;
-                this.showItems[f].backgroundColor = this.selectHoveBC;
-                this.moveInIdx = f;
-            }
-            else {
-                this.restoreBack(this.moveInIdx);
-            }
             if (this.ctrlImg.hitTestPoint(evt.getX(), evt.getY())) {
                 if (!this.ctrlHove) {
                     this.ctrlHove = true;
@@ -159,12 +142,16 @@ var RxsgSelectList = (function (_super) {
                 this.ctrlStartY = evt.getY();
                 return;
             }
-            if (!this.upClick && this.upImg.hitTestPoint(evt.getX(), evt.getY())) {
+            else if (this.listHitTestPoint(evt)) {
+                var f = this.listHitIndex(evt);
+                this.updateSelect(this.displayStartIdx + f);
+            }
+            else if (!this.upClick && this.upImg.hitTestPoint(evt.getX(), evt.getY())) {
                 this.upImg.texture = this.down;
                 this.upClick = true;
                 return;
             }
-            if (!this.downClick && this.downImg.hitTestPoint(evt.getX(), evt.getY())) {
+            else if (!this.downClick && this.downImg.hitTestPoint(evt.getX(), evt.getY())) {
                 this.downImg.texture = this.down;
                 this.downClick = true;
                 return;
@@ -185,14 +172,62 @@ var RxsgSelectList = (function (_super) {
                 return;
             }
         }
+        else if (evt.type == SimpleMouseEvent.WHEEL) {
+            if (evt.getDeltaY() < 0) {
+                this.onUpClick();
+            }
+            else if (evt.getDeltaY() > 0) {
+                this.onDownClick();
+            }
+        }
+        if (this.listHitTestPoint(evt)) {
+            var f = this.listHitIndex(evt);
+            if (f != this.moveInIdx) {
+                this.restoreBack(this.moveInIdx);
+                this.moveInIdx = f;
+            }
+            this.showItems[f].background = true;
+            this.showItems[f].backgroundColor = this.selectHoveBC;
+        }
+        else {
+            this.restoreBack(this.moveInIdx);
+        }
     };
     RxsgSelectList.prototype.setH = function (h) {
         this.height = h;
         this.updatePosition();
     };
+    RxsgSelectList.prototype.listHitTestPoint = function (evt) {
+        var ox = evt.getX() - this.x;
+        var oy = evt.getY() - this.y - 1;
+        return ox > 0 && ox < this.width - 18 && oy > 0 && oy < this.height - 1;
+    };
+    RxsgSelectList.prototype.listHitIndex = function (evt) {
+        var oy = evt.getY() - this.y - 1;
+        var f = Math.floor(oy / RxsgSelectList.itemHeight);
+        //修正部分计算错误的情况
+        f = f < 0 ? 0 : f;
+        f = f >= this.showSize ? this.showSize - 1 : f;
+        return f;
+    };
     RxsgSelectList.prototype.setSize = function (w, h) {
         this.width = w;
         this.height = h;
+    };
+    RxsgSelectList.prototype.updateSelect = function (selectIdx) {
+        if (selectIdx < 0 || selectIdx >= this.datas.length) {
+            console.log('下来选择框值输入错误!');
+        }
+        this.selectIdx = selectIdx;
+        this.updateList(this.getShowData());
+        this.ctrlOY = this.ctrlOneY * this.displayStartIdx;
+        this.updateCtrlPosistion();
+        if (this.updateSelectNotifyFun) {
+            this.updateSelectNotifyFun(this.getSelected());
+        }
+    };
+    RxsgSelectList.prototype.getSelected = function () {
+        return this.selectIdx;
     };
     RxsgSelectList.prototype.moveCtrl = function (move) {
         var moved = false;
